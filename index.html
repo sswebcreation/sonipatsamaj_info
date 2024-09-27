@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=" />
+    <title>SONIPAT SAMAJ APP</title>
+    <script
+      src="https://kit.fontawesome.com/c32adfdcda.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    
+  </head>
+  <body>
+    <section>
+      <div class="section-header">
+        <div class="container">
+          <h2>SONIPAT SAMAJ</h2>
+          <p style="text-align: left;">
+            The SONIPAT SAMAJ APP is a valuable tool designed to help users
+            easily find and connect with family members and trustees within
+            their community. This app provides detailed information about
+            relatives, making it simpler to trace family connections and
+            understand one’s lineage. By offering a comprehensive database of
+            family members, users can effortlessly explore their ancestry and
+            build a clearer picture of their family tree. This feature is
+            particularly beneficial for those interested in genealogy and
+            preserving their family history for future generations.
+          </p>
+          <p style="text-align: left; margin-top: 3%;">
+            In addition to family connections, the SONIPAT SAMAJ APP also
+            includes a thorough directory of trustees. This directory ensures
+            that users have access to important contacts within their religious
+            community, facilitating communication and collaboration on community
+            projects and events. Whether you need to reach out to a trustee for
+            guidance or to participate in community activities, the app provides
+            a seamless way to connect with key figures in your community. This
+            fosters a sense of unity and support among members, strengthening
+            the bonds within the community.
+          </p>
+          <p style="text-align: left; margin-top: 3%;">
+            Whether you’re looking to reconnect with distant relatives or need
+            to find a trustee for community-related matters, the SONIPAT SAMAJ
+            APP serves as a reliable and user-friendly resource. Its intuitive
+            interface and extensive database make it easy for users of all ages
+            to navigate and find the information they need. By bridging the gap
+            between family members and community leaders, the app plays a
+            crucial role in maintaining the cultural and social fabric of the
+            community. Overall, the SONIPAT SAMAJ APP is an indispensable tool
+            for anyone looking to stay connected and engaged with their family
+            and community.
+          </p>
+        </div>
+        <div class="container" style="margin-top: 40px">
+          <h2>Contact Us</h2>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="contact-info">
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <i class="fas fa-home"></i>
+              </div>
+
+              <div class="contact-info-content">
+                <h4>Address</h4>
+                <p>
+                  SHREE RAM MANDIR,<br />
+                  SURAT <br />
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+
+              <div class="contact-info-content">
+                <h4>Phone</h4>
+                <p>992-573-8893</p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+
+              <div class="contact-info-content">
+                <h4>Email</h4>
+                <p>dev@sswebcreation.in</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form">
+            <form action="" id="contact-form" onsubmit="showToast(event)">
+              <h2>Send Message</h2>
+              <div class="input-box">
+                <label>Full Name</label>
+                <input type="text" required="true" name="" />
+              </div>
+
+              <div class="input-box">
+                <label>Email</label>
+                <input type="email" required="true" name="" />
+              </div>
+
+              <div class="input-box">
+                <label>Type your Message...</label>
+                <textarea required="true" name=""></textarea>
+              </div>
+
+              <div class="input-box">
+                <input type="submit" value="Send" name="" />
+              </div>
+            </form>
+            <div class="loader" id="loader"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Toast Notification -->
+      <div id="toast" class="toast">Message sent successfully!</div>
+    </section>
+    <script>
+      function showToast(event) {
+        event.preventDefault(); // Prevent the default form submission
+            const loader = document.getElementById('loader');
+            const toast = document.getElementById('toast');
+
+            // Show the loader
+            loader.style.display = 'block';
+
+            // Hide the loader and show the toast after 1 second
+            setTimeout(() => {
+                loader.style.display = 'none'; // Hide the loader
+                toast.className = 'toast show'; // Show the toast
+
+                // Hide the toast after another second
+                setTimeout(() => {
+                    toast.className = 'toast'; // Hide the toast
+                }, 1000);
+            }, 1000);
+      }
+  </script>
+  </body>
+</html>
